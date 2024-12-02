@@ -87,160 +87,137 @@
         <h1>Algorithm Concepts</h1>
     </header>
 
-    <section>
-        <h2>Types of Problems in Nature</h2>
-
-        <h3>📖 Iteration</h3>
-        <p>Iteration means repeating a set of instructions until a condition is met.</p>
-        <div class="example">
-            <strong>Examples:</strong>
-            <ul>
-                <li>Finding the Sum of Elements: Add numbers like [2, 4, 6, 8], which gives 20.</li>
-                <li>Sorting: Algorithms like Bubble Sort repeatedly swap out-of-order elements.</li>
-            </ul>
-        </div>
-
-        <h3>📄 Recursion</h3>
-        <p>Recursion is when a function calls itself to solve smaller parts of the problem.</p>
-        <div class="example">
-            <strong>Examples:</strong>
-            <ul>
-                <li>Factorial Calculation: 5! = 5 × 4!, eventually 120.</li>
-                <li>Tree Traversals: Visit nodes in hierarchical data systematically.</li>
-            </ul>
-        </div>
-
-        <h3>🔎 Backtracking</h3>
-        <p>Backtracking explores solutions but backtracks when hitting dead ends.</p>
-        <div class="example">
-            <strong>Examples:</strong>
-            <ul>
-                <li>Sudoku: Fill in numbers and retry upon conflicts.</li>
-                <li>N-Queens: Try placing queens on a chessboard until valid.</li>
-            </ul>
-        </div>
-
-        <div class="note">
-            <strong>Quick Tip:</strong> Learn algorithms interactively on platforms like LeetCode or HackerRank!
-        </div>
-
-        <h2>Space and Time Efficiency & Order of Growth</h2>
-        <h3>1. Space Efficiency</h3>
-        <p>Space efficiency refers to how much memory an algorithm uses.</p>
-        <div class="example">
-            <strong>Efficient Packing:</strong> You only take essentials, so your luggage is light.<br>
-            <strong>Inefficient Packing:</strong> You pack everything, making it hard to carry.
-        </div>
-
-        <h3>2. Time Efficiency</h3>
-        <p>Time efficiency refers to how fast an algorithm completes its task.</p>
-        <div class="example">
-            <strong>Efficient Algorithm:</strong> A fast runner finishing quickly.<br>
-            <strong>Inefficient Algorithm:</strong> A slow runner, especially with more work (bigger input).
-        </div>
-
-        <h3>3. Order of Growth</h3>
-        <p>Order of growth measures how an algorithm's time or memory usage changes as input size increases:</p>
-        <ul>
-            <li><strong>O(1)</strong>: Constant time. E.g., Accessing the first item in a list.</li>
-            <li><strong>O(n)</strong>: Linear time. E.g., Searching a book by checking each one.</li>
-            <li><strong>O(n²)</strong>: Quadratic time. E.g., Nested operations like comparing every student.</li>
-            <li><strong>O(log n)</strong>: Logarithmic time. E.g., Binary search in a dictionary.</li>
-            <li><strong>O(2ⁿ)</strong>: Exponential time. E.g., Solving a puzzle doubling in possibilities.</li>
-        </ul>
-
-        <h2>Takeaways from Design Principles</h2>
-        <h3>1. Divide and Conquer</h3>
-        <p>Divide a big problem into smaller parts, solve each, and combine results.</p>
-        <div class="example">
-            <strong>Example:</strong> Merge Sort divides and merges sorted lists.
-        </div>
-
-        <h3>2. Greedy Strategy</h3>
-        <p>Make the best possible decision at each step, assuming it leads to the optimal solution.</p>
-        <div class="example">
-            <strong>Example:</strong> Dijkstra’s Algorithm finds shortest paths by choosing the nearest node.
-        </div>
-
-        <h3>3. Dynamic Programming</h3>
-        <p>Save results of smaller problems to reuse them and avoid recalculating.</p>
-        <div class="example">
-            <strong>Example:</strong> Fibonacci Sequence uses stored results for efficiency.
-        </div>
-
-        <h3>4. Backtracking</h3>
-        <p>Explore all solutions, backtracking if one path fails, to try others.</p>
-        <div class="example">
-            <strong>Example:</strong> N-Queens Problem places queens on a chessboard without conflict.
-        </div>
-
-        <h2>Hierarchical Data and Tree Data Structures</h2>
-        <h3>1. Hierarchical Data</h3>
-        <p>Hierarchical data is organized in a tree-like structure with parent-child relationships.</p>
-        <div class="example">
-            <strong>Examples:</strong>
-            <ul>
-                <li>Family Trees: Representing family relationships.</li>
-                <li>Company Hierarchies: Roles and departments.</li>
-                <li>File Systems: Directories and files on a computer.</li>
-            </ul>
-        </div>
-
-        <h3>2. Tree Structures</h3>
-        <p>Trees are hierarchical data structures with nodes. Types include:</p>
-        <ul>
-            <li><strong>Binary Search Tree (BST)</strong></li>
-            <pre class="code">
-                50
-               /  \
-             30    70
-            /  \   /  \
-           20  40 60   80
-            </pre>
-            <li><strong>AVL Tree</strong>: Self-balancing BST.</li>
-            <li><strong>Red-Black Tree</strong>: A balanced BST with red/black nodes.</li>
-            <li><strong>Heap</strong>: A complete binary tree with Max-Heap and Min-Heap variants.</li>
-            <li><strong>Trie</strong>: A prefix tree for storing strings.</li>
-        </ul>
-
-        <h2>Sorting and Searching Algorithms</h2>
-        <h3>1. Sorting Algorithms</h3>
-        <ul>
-            <li>Bubble Sort: Swaps adjacent elements repeatedly.</li>
-            <li>Insertion Sort: Inserts elements in their correct position.</li>
-            <li>Merge Sort: Divides and merges sorted subarrays.</li>
-            <li>Quick Sort: Partitions and sorts recursively.</li>
-            <li>Heap Sort: Uses heaps to sort efficiently.</li>
-        </ul>
-
-        <h3>2. Searching Algorithms</h3>
-        <ul>
-            <li>Linear Search: Checks each element sequentially.</li>
-            <li>Binary Search: Efficient search on sorted arrays by halving the range.</li>
-        </ul>
-
-        <h2>Graphs and Their Applications</h2>
-        <h3>1. Graph Basics</h3>
-        <p>A graph consists of nodes (vertices) and edges (connections). Types of graphs include:</p>
-        <ul>
-            <li><strong>Undirected Graph:</strong> Edges have no direction.</li>
-            <li><strong>Directed Graph:</strong> Edges have direction (arrows).</li>
-            <li><strong>Weighted Graph:</strong> Edges have weights or costs.</li>
-        </ul>
-
-        <h3>2. Representations</h3>
-        <ul>
-            <li><strong>Adjacency Matrix:</strong> A 2D array where matrix[i][j] is 1 if there's an edge between nodes i and j.</li>
-            <li><strong>Adjacency List:</strong> Each node points to a list of connected nodes.</li>
-        </ul>
-
-        <h3>3. Applications</h3>
-        <ul>
-            <li>Social Networks: Representing friendships or follows.</li>
-            <li>Navigation: Shortest paths on maps (e.g., GPS).</li>
-            <li>Recommendation Systems: Connections between users and products.</li>
-        </ul>
-    </section>
+    <section id="space-time-efficiency">
+    <h2>Space and Time Efficiency & Order of Growth</h2>
+    <h3>Space Efficiency</h3>
+    <p>Space efficiency refers to how much memory an algorithm uses. Imagine you're packing for a trip:</p>
+    <ul>
+        <li>Efficient Packing: You only take essentials, so your luggage is light.</li>
+        <li>Inefficient Packing: You pack everything, making it hard to carry.</li>
+    </ul>
+    
+    <h3>Time Efficiency</h3>
+    <p>Time efficiency refers to how fast an algorithm completes its task. Think of it like a race:</p>
+    <ul>
+        <li>Efficient Algorithm: A fast runner finishing quickly.</li>
+        <li>Inefficient Algorithm: A slow runner, especially with more work (bigger input).</li>
+    </ul>
+    
+    <h3>Order of Growth</h3>
+    <p>Order of growth measures how an algorithm's time or memory usage changes as input size increases:</p>
+    <ul>
+        <li>O(1): Constant time. E.g., Accessing the first item in a list.</li>
+        <li>O(n): Linear time. E.g., Searching a book by checking each one.</li>
+        <li>O(n²): Quadratic time. E.g., Nested operations like comparing every student.</li>
+        <li>O(log n): Logarithmic time. E.g., Binary search in a dictionary.</li>
+        <li>O(2ⁿ): Exponential time. E.g., Solving a puzzle doubling in possibilities.</li>
+    </ul>
+</section> 
+<section id="design-principles">
+    <h2>Takeaways from Design Principles</h2>
+    
+    <h3>1. Divide and Conquer</h3>
+    <p>Divide a big problem into smaller parts, solve each, and combine results.</p>
+    <p>Example: Merge Sort divides and merges sorted lists.</p>
+    
+    <h3>2. Greedy Strategy</h3>
+    <p>Make the best possible decision at each step, assuming it leads to the optimal solution.</p>
+    <p>Example: Dijkstra’s Algorithm finds shortest paths by choosing the nearest node.</p>
+    
+    <h3>3. Dynamic Programming</h3>
+    <p>Save results of smaller problems to reuse them and avoid recalculating.</p>
+    <p>Example: Fibonacci Sequence uses stored results for efficiency.</p>
+    
+    <h3>4. Backtracking</h3>
+    <p>Explore all solutions, backtracking if one path fails, to try others.</p>
+    <p>Example: N-Queens Problem places queens on a chessboard without conflict.</p>
+</section>
+ <section id="hierarchical-data">
+    <h2>Hierarchical Data and Tree Data Structures</h2>
+    
+    <h3>1. Hierarchical Data</h3>
+    <p>Hierarchical data is organized in a tree-like structure with parent-child relationships.</p>
+    <ul>
+        <li>Family Trees: Representing family relationships.</li>
+        <li>Company Hierarchies: Roles and departments.</li>
+        <li>File Systems: Directories and files on a computer.</li>
+    </ul>
+    
+    <h3>2. Tree Structures</h3>
+    <p>Trees are hierarchical data structures with nodes. The top node is the root, and the bottom nodes are leaves. Types include:</p>
+    <ul>
+        <li><b>Binary Search Tree (BST)</b>: Left child < smaller value; Right child > larger value.</li>
+        <li><b>AVL Tree</b>: Self-balancing BST ensuring height balance.</li>
+        <li><b>Red-Black Tree</b>: A BST with red/black nodes to maintain balance.</li>
+        <li><b>Heap</b>: Complete binary tree with Max-Heap (Parent > children) or Min-Heap (Parent < children).</li>
+        <li><b>Trie</b>: A prefix tree for string storage.</li>
+    </ul>
+</section> 
+ <section id="array-query">
+    <h2>Array Query Algorithms</h2>
+    <p>Array query algorithms focus on efficiently answering specific questions or finding elements within an array.</p>
+    <ul>
+        <li>Binary Search: Efficient search on sorted arrays.</li>
+        <li>Prefix Sum: Pre-computing sums to answer range queries quickly.</li>
+        <li>Sliding Window: Efficiently computing results over a moving window in an array.</li>
+    </ul>
+</section>  
+<section id="tree-graph-traversals">
+    <h2>Tree vs. Graphs and Their Traversals</h2>
+    
+    <h3>Tree</h3>
+    <p>A connected, acyclic graph with a unique path between any two nodes. Traversals include pre-order, in-order, and post-order.</p>
+    
+    <h3>Graph</h3>
+    <p>A collection of vertices connected by edges, which may have cycles. Graph traversal methods include:</p>
+    <ul>
+        <li>BFS (Breadth-First Search): Explores nodes level by level.</li>
+        <li>DFS (Depth-First Search): Explores nodes deeply before backtracking.</li>
+    </ul>
+    
+    <h3>Applications:</h3>
+    <ul>
+        <li>Trees: Used in decision-making, file systems, and databases (e.g., B-trees for indexing).</li>
+        <li>Graphs: Employed in network analysis, social networks, and route optimization.</li>
+    </ul>
+</section>
+<section id="sorting-searching">
+    <h2>Sorting and Searching Algorithms</h2>
+    
+    <h3>Sorting Algorithms</h3>
+    <ul>
+        <li>Bubble Sort: Repeatedly swaps adjacent elements if they’re in the wrong order.</li>
+        <li>Insertion Sort: Inserts elements into their correct position.</li>
+        <li>Merge Sort: Divides the array and merges subarrays.</li>
+        <li>Quick Sort: Partitions the array and recursively sorts subarrays.</li>
+        <li>Heap Sort: Builds a heap and extracts sorted elements.</li>
+    </ul>
+    
+    <h3>Searching Algorithms</h3>
+    <ul>
+        <li>Linear Search: Checks each element sequentially.</li>
+        <li>Binary Search: Efficiently finds an element in a sorted array by halving the search range.</li>
+    </ul>
+</section>
+<section id="graph-algorithms">
+    <h2>Graph Algorithms</h2>
+    <p>Graph algorithms deal with problems involving graphs like finding shortest paths, spanning trees, and connectivity.</p>
+    <ul>
+        <li>Dijkstra's Algorithm: Finds the shortest path from a source node to all other nodes.</li>
+        <li>Bellman-Ford Algorithm: Finds shortest paths even with negative weights.</li>
+        <li>Floyd-Warshall Algorithm: Calculates shortest paths between all pairs of nodes.</li>
+        <li>Prim's Algorithm: Finds the Minimum Spanning Tree (MST) of a graph.</li>
+    </ul>
+</section>
+<section id="importance-graph-algorithms">
+    <h2>Importance of Graph Algorithms</h2>
+    <p>Graph algorithms are essential in solving real-world problems such as:</p>
+    <ul>
+        <li><b>Spanning Trees</b>: Connects all vertices with the fewest edges, found using Kruskal’s and Prim’s algorithms.</li>
+        <li><b>Shortest Paths</b>: Dijkstra’s and Bellman-Ford algorithms find the shortest paths, useful in GPS systems and network routing.</li>
+        <li><b>Connectivity</b>: Identifying whether a graph is connected, or if there is a path between two nodes.</li>
+    </ul>
+</section>
 
     <footer>
         <p>&copy; 2024 Algorithm Concepts. All rights reserved.</p>
