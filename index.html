@@ -7,164 +7,218 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            margin: 20px;
-            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
             color: #333;
         }
-        h1, h2 {
-            color: #333;
+
+        header {
+            background-color: #007bff;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
         }
+
+        h1 {
+            font-size: 2.5em;
+        }
+
+        .container {
+            padding: 20px;
+            margin: 0 auto;
+            max-width: 1100px;
+            background-color: white;
+        }
+
         h2 {
+            color: #007bff;
             margin-top: 30px;
+            font-size: 1.8em;
         }
-        p {
-            line-height: 1.6;
+
+        p, ul, ol {
+            font-size: 1.1em;
+            line-height: 1.8;
         }
-        ul {
-            margin: 10px 0;
+
+        ul, ol {
+            padding-left: 20px;
         }
+
         code {
             background-color: #f4f4f4;
-            padding: 2px 4px;
+            padding: 3px 8px;
             border-radius: 4px;
+            font-size: 1.1em;
         }
+
         .example {
             background-color: #e8f4f8;
-            padding: 10px;
+            padding: 15px;
             margin: 10px 0;
-            border-left: 5px solid #007BFF;
+            border-left: 5px solid #007bff;
         }
+
+        .example ul {
+            padding-left: 20px;
+            list-style: disc;
+        }
+
         .section {
             margin-bottom: 40px;
+        }
+
+        footer {
+            background-color: #f1f1f1;
+            text-align: center;
+            padding: 10px;
+            margin-top: 50px;
+            font-size: 0.9em;
+        }
+
+        .section-title {
+            color: #444;
+            font-size: 1.3em;
+            font-weight: bold;
         }
     </style>
 </head>
 <body>
 
-    <h1>Algorithm Concepts</h1>
+    <header>
+        <h1>Algorithm Concepts</h1>
+    </header>
 
-    <div class="section">
-        <h2>1. Types of Problems in Nature (Iteration, Recursion, Backtracking)</h2>
-        <p><strong>Iteration</strong>: Repeating a set of instructions until a condition is met. It's used for processing collections multiple times.</p>
-        <div class="example">
+    <div class="container">
+        <!-- 1. Types of Problems in Nature (Iteration, Recursion, Backtracking) -->
+        <div class="section">
+            <h2>1. Types of Problems in Nature (Iteration, Recursion, Backtracking)</h2>
+            <p><strong>Iteration</strong>: Repeating a set of instructions until a condition is met. It’s commonly used in problems where you need to process a collection multiple times.</p>
+            <div class="example">
+                <ul>
+                    <li><strong>Finding the sum of elements in an array</strong>: Loop through the array and add up the numbers.</li>
+                    <li><strong>Sorting an array</strong>: Algorithms like Bubble Sort use iteration to sort elements.</li>
+                </ul>
+            </div>
+
+            <p><strong>Recursion</strong>: Involves a function calling itself to break down a problem into smaller parts. It’s useful in problems that can be divided into subproblems.</p>
+            <div class="example">
+                <ul>
+                    <li><strong>Factorial calculation</strong>: Calculate recursively by multiplying a number by smaller numbers.</li>
+                    <li><strong>Tree traversals</strong>: Use recursion to visit nodes in pre-order, in-order, or post-order.</li>
+                </ul>
+            </div>
+
+            <p><strong>Backtracking</strong>: This method explores all possible solutions by going through each choice, backtracking when a path leads to an invalid solution.</p>
+            <div class="example">
+                <ul>
+                    <li><strong>Solving Sudoku</strong>: Try filling the grid and backtrack when a conflict is found.</li>
+                    <li><strong>N-Queens problem</strong>: Try placing queens on a chessboard such that no two queens threaten each other and backtrack if necessary.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- 2. Space and Time Efficiency & Order of Growth -->
+        <div class="section">
+            <h2>2. Space and Time Efficiency & Order of Growth</h2>
+            <p><strong>Space Efficiency</strong>: Refers to how much memory an algorithm uses. It's important as memory limitations can slow down or crash the system for large inputs.</p>
+            <p><strong>Time Efficiency</strong>: Refers to how quickly an algorithm runs, often measured using time complexity.</p>
+            <p><strong>Order of Growth</strong>: Describes how the algorithm's time or space complexity increases with the size of the input. Common complexities include:</p>
             <ul>
-                <li><strong>Finding the sum of elements in an array</strong>: Loop through the array and add up all the numbers.</li>
-                <li><strong>Sorting an array</strong>: Algorithms like Bubble Sort use iteration to arrange elements.</li>
+                <li><code>O(1)</code>: Constant time</li>
+                <li><code>O(n)</code>: Linear time</li>
+                <li><code>O(n²)</code>: Quadratic time</li>
+                <li><code>O(log n)</code>: Logarithmic time</li>
+                <li><code>O(2^n)</code>: Exponential time</li>
+            </ul>
+            <p><strong>Class of Problems</strong>:</p>
+            <ul>
+                <li><strong>Polynomial Time Problems</strong>: These problems can be solved efficiently even as the input size grows.</li>
+                <li><strong>NP-Hard/NP-Complete</strong>: Problems that grow in complexity and are impractical to solve for large inputs.</li>
             </ul>
         </div>
 
-        <p><strong>Recursion</strong>: A function calls itself to solve smaller parts of a problem.</p>
-        <div class="example">
+        <!-- 3. Takeaways from Design Principles -->
+        <div class="section">
+            <h2>3. Takeaways from Design Principles</h2>
+            <p>Some essential algorithm design principles include:</p>
             <ul>
-                <li><strong>Factorial calculation</strong>: Multiply a number recursively by smaller numbers down to 1.</li>
-                <li><strong>Tree Traversals</strong>: Using recursion to visit nodes in pre-order, in-order, or post-order.</li>
+                <li><strong>Divide and Conquer</strong>: Break problems into smaller sub-problems (e.g., Merge Sort).</li>
+                <li><strong>Greedy Strategy</strong>: Make the optimal choice at each step (e.g., Dijkstra’s algorithm).</li>
+                <li><strong>Dynamic Programming</strong>: Solve overlapping subproblems (e.g., Fibonacci sequence).</li>
+                <li><strong>Backtracking</strong>: Explore all possible solutions and backtrack when necessary (e.g., N-Queens problem).</li>
             </ul>
         </div>
 
-        <p><strong>Backtracking</strong>: Explores all solutions by trying each option and backtracking when necessary.</p>
-        <div class="example">
+        <!-- 4. Hierarchical Data and Tree Data Structures -->
+        <div class="section">
+            <h2>4. Hierarchical Data and Tree Data Structures</h2>
+            <p><strong>Hierarchical Data</strong>: Data that is structured in a tree-like manner with parent-child relationships. Examples include file systems and organizational charts.</p>
+            <p><strong>Tree Structures</strong>:</p>
             <ul>
-                <li><strong>Solving Sudoku</strong>: Try values and backtrack if there's a conflict.</li>
-                <li><strong>N-Queens problem</strong>: Try placing queens so they don't threaten each other and backtrack if a solution doesn't work.</li>
+                <li><strong>Binary Search Tree (BST)</strong>: A tree where each node's left child is smaller, and the right child is larger, enabling efficient searches.</li>
+                <li><strong>AVL Tree</strong>: A self-balancing BST ensuring log(n) performance.</li>
+                <li><strong>Red-Black Tree</strong>: A balanced tree using colors to ensure optimal performance.</li>
+                <li><strong>Heap</strong>: A complete binary tree, useful for implementing priority queues.</li>
+                <li><strong>Trie</strong>: A tree-like structure for storing strings, often used in autocomplete systems.</li>
             </ul>
+        </div>
+
+        <!-- 5. Array Query Algorithms -->
+        <div class="section">
+            <h2>5. Array Query Algorithms</h2>
+            <p>These algorithms allow efficient handling of range queries on arrays. Examples include:</p>
+            <div class="example">
+                <ul>
+                    <li><strong>Prefix Sum Arrays</strong>: Quickly compute the sum of elements in a range.</li>
+                    <li><strong>Segment Trees</strong>: Used for efficiently answering range queries and updating elements.</li>
+                    <li><strong>Sparse Tables</strong>: Optimized for answering range minimum queries.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- 6. Tree vs. Graphs and Their Traversals -->
+        <div class="section">
+            <h2>6. Tree vs. Graphs and Their Traversals</h2>
+            <p><strong>Tree</strong>: A connected, acyclic graph with a unique path between any two nodes. Traversals include pre-order, in-order, and post-order.</p>
+            <p><strong>Graph</strong>: A collection of vertices connected by edges, which may have cycles. Graph traversal methods include:</p>
+            <ul>
+                <li><strong>BFS (Breadth-First Search)</strong>: Explores nodes level by level.</li>
+                <li><strong>DFS (Depth-First Search)</strong>: Explores nodes deeply before backtracking.</li>
+            </ul>
+        </div>
+
+        <!-- 7. Sorting and Searching Algorithms -->
+        <div class="section">
+            <h2>7. Sorting and Searching Algorithms</h2>
+            <p><strong>Sorting Algorithms</strong>:</p>
+            <ul>
+                <li><strong>Bubble Sort</strong>: Repeatedly swaps adjacent elements.</li>
+                <li><strong>Insertion Sort</strong>: Inserts elements into their correct position.</li>
+                <li><strong>Merge Sort</strong>: Divides the array and merges subarrays.</li>
+                <li><strong>Quick Sort</strong>: Partitions the array and recursively sorts subarrays.</li>
+                <li><strong>Heap Sort</strong>: Builds a heap and extracts sorted elements.</li>
+            </ul>
+
+            <p><strong>Searching Algorithms</strong>:</p>
+            <ul>
+                <li><strong>Linear Search</strong>: Checks each element sequentially.</li>
+                <li><strong>Binary Search</strong>: Efficiently finds an element in a sorted array by halving the search range.</li>
+            </ul>
+        </div>
+
+        <!-- 8. Graph Algorithms -->
+        <div class="section">
+            <h2>8. Importance of Graph Algorithms</h2>
+            <p><strong>Spanning Trees</strong>: Connects all vertices with the fewest edges. Algorithms like Kruskal’s and Prim’s find the Minimum Spanning Tree (MST).</p>
+            <p><strong>Shortest Paths</strong>: Dijkstra’s and Bellman-Ford algorithms find the shortest paths between nodes, useful in GPS systems and network routing.</p>
         </div>
     </div>
 
-    <div class="section">
-        <h2>2. Space and Time Efficiency & Order of Growth</h2>
-        <p><strong>Space Efficiency</strong>: Refers to how much memory an algorithm uses.</p>
-        <p><strong>Time Efficiency</strong>: Refers to how fast an algorithm runs, often described by time complexity.</p>
-        <p><strong>Order of Growth</strong>: Describes how the time or space complexity increases with input size:</p>
-        <ul>
-            <li><code>O(1)</code>: Constant time</li>
-            <li><code>O(n)</code>: Linear time</li>
-            <li><code>O(n²)</code>: Quadratic time</li>
-            <li><code>O(log n)</code>: Logarithmic time</li>
-            <li><code>O(2^n)</code>: Exponential time</li>
-        </ul>
-        <p><strong>Class of Problems</strong>:</p>
-        <ul>
-            <li><strong>Polynomial Time Problems</strong>: Solvable efficiently as input size grows.</li>
-            <li><strong>NP-Hard/NP-Complete</strong>: Problems that become impractical for large inputs.</li>
-        </ul>
-    </div>
-
-    <div class="section">
-        <h2>3. Takeaways from Design Principles</h2>
-        <ul>
-            <li><strong>Divide and Conquer</strong>: Break problems into smaller sub-problems (e.g., Merge Sort).</li>
-            <li><strong>Greedy Strategy</strong>: Make the best choice at each step (e.g., Dijkstra’s algorithm).</li>
-            <li><strong>Dynamic Programming</strong>: Solve overlapping subproblems (e.g., Fibonacci sequence).</li>
-            <li><strong>Backtracking</strong>: Explore all solutions and backtrack when necessary (e.g., N-Queens problem).</li>
-        </ul>
-    </div>
-
-    <div class="section">
-        <h2>4. Hierarchical Data and Tree Data Structures</h2>
-        <p><strong>Hierarchical Data</strong>: Data structured in a tree-like fashion, with parent-child relationships. Examples include family trees and file systems.</p>
-        <p><strong>Tree Structures</strong>:</p>
-        <ul>
-            <li><strong>BST</strong>: A tree where each node’s left child is smaller and the right child is larger.</li>
-            <li><strong>AVL Tree</strong>: A self-balancing BST.</li>
-            <li><strong>Red-Black Tree</strong>: A balanced tree using color properties.</li>
-            <li><strong>Heap</strong>: A complete binary tree, used in priority queues.</li>
-            <li><strong>Trie</strong>: A tree for storing strings, used in autocomplete systems.</li>
-        </ul>
-    </div>
-
-    <div class="section">
-        <h2>5. Array Query Algorithms</h2>
-        <p>These algorithms allow efficient answers to range queries in arrays.</p>
-        <div class="example">
-            <ul>
-                <li><strong>Prefix Sum Arrays</strong>: Quickly calculate the sum of elements in a range.</li>
-                <li><strong>Segment Trees</strong>: Handle range queries and updates efficiently.</li>
-                <li><strong>Sparse Tables</strong>: Optimized for range minimum queries.</li>
-            </ul>
-        </div>
-    </div>
-
-    <div class="section">
-        <h2>6. Tree vs. Graphs and Their Traversals</h2>
-        <p><strong>Tree</strong>: A connected, acyclic graph. Traversal types include pre-order, in-order, and post-order.</p>
-        <p><strong>Graph</strong>: A collection of vertices connected by edges, possibly with cycles. Traversals include BFS (level-wise) and DFS (deep-first).</p>
-    </div>
-
-    <div class="section">
-        <h2>7. Sorting and Searching Algorithms</h2>
-        <p><strong>Sorting Algorithms</strong>:</p>
-        <ul>
-            <li><strong>Bubble Sort</strong>: Repeatedly swaps adjacent elements if needed.</li>
-            <li><strong>Insertion Sort</strong>: Inserts elements into the sorted part of the array.</li>
-            <li><strong>Merge Sort</strong>: Divides and merges sorted subarrays.</li>
-            <li><strong>Quick Sort</strong>: Partitions and recursively sorts subarrays.</li>
-            <li><strong>Heap Sort</strong>: Builds a heap and sorts by extracting elements.</li>
-        </ul>
-        <p><strong>Searching Algorithms</strong>:</p>
-        <ul>
-            <li><strong>Linear Search</strong>: Checks each element sequentially.</li>
-            <li><strong>Binary Search</strong>: Efficient for sorted arrays by halving the search range.</li>
-        </ul>
-    </div>
-
-    <div class="section">
-        <h2>8. Importance of Graph Algorithms (Spanning Trees and Shortest Paths)</h2>
-        <ul>
-            <li><strong>Spanning Trees</strong>: Connect all vertices with the least edges, using Kruskal’s and Prim’s algorithms.</li>
-            <li><strong>Shortest Paths</strong>: Dijkstra’s and Bellman-Ford find the shortest path between nodes.</li>
-        </ul>
-    </div>
-
-    <div class="section">
-        <h2>9. Algorithm Design Techniques</h2>
-        <ul>
-            <li><strong>Dijkstra’s Algorithm</strong>: Finds the shortest path in a weighted graph.</li>
-            <li><strong>Floyd’s Algorithm</strong>: Calculates all-pairs shortest paths.</li>
-            <li><strong>Kruskal’s Algorithm</strong>: Finds the Minimum Spanning Tree (MST).</li>
-            <li><strong>Warshall’s Algorithm</strong>: Computes transitive closure.</li>
-            <li><strong>Prim’s Algorithm</strong>: Finds the MST by growing a tree.</li>
-        </ul>
-    </div>
+    <footer>
+        <p>&copy; 2024 Algorithm Concepts. All Rights Reserved.</p>
+    </footer>
 
 </body>
 </html>
