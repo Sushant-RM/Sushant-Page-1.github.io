@@ -152,19 +152,53 @@
 </div>
 
         <!-- 2. Space and Time Efficiency & Order of Growth -->
-        <div class="section">
-            <h2>2. Space and Time Efficiency & Order of Growth</h2>
-            <p><strong>Space Efficiency</strong>: Refers to how much memory an algorithm uses. It's important as memory limitations can slow down or crash the system for large inputs.</p>
-            <p><strong>Time Efficiency</strong>: Refers to how quickly an algorithm runs, often measured using time complexity.</p>
-            <p><strong>Order of Growth</strong>: Describes how the algorithm's time or space complexity increases with the size of the input. Common complexities include:</p>
-            <ul>
-                <li><code>O(1)</code>: Constant time– the algorithm runs in the same time, regardless of input size.</li>
-                <li><code>O(n)</code>: Linear time – the time increases directly in proportion to the input size.</li>
-                <li><code>O(n²)</code>: Quadratic time – time grows faster as the input size increases, like in nested loops.</li>
-                <li><code>O(log n)</code>: Logarithmic time– time increases slowly even as input grows, often seen in binary search.</li>
-                <li><code>O(2^n)</code>: Exponential time– the algorithm's time doubles with each added input, making it impractical for large inputs.</li>
-            </ul>
-        </div>
+<h1>Space and Time Efficiency & Order of Growth</h1>
+
+<div class="section">
+    <h2>1. Space Efficiency</h2>
+    <p>Space efficiency refers to how much memory an algorithm uses. Imagine you're packing for a trip:</p>
+    <ul>
+        <li><strong>Efficient Packing:</strong> You only take essentials, so your luggage is light.</li>
+        <li><strong>Inefficient Packing:</strong> You pack everything you own, making it hard to carry.</li>
+    </ul>
+    <p class="example">If an algorithm uses too much memory, it may slow down or even crash, especially for large inputs.</p>
+</div>
+
+<div class="section">
+    <h2>2. Time Efficiency</h2>
+    <p>Time efficiency refers to how fast an algorithm completes its task. Think of it like a race:</p>
+    <ul>
+        <li><strong>Efficient Algorithm:</strong> A fast runner who finishes quickly.</li>
+        <li><strong>Inefficient Algorithm:</strong> A slow runner, frustrating when there’s more work (bigger input).</li>
+    </ul>
+</div>
+
+<div class="section">
+    <h2>3. Order of Growth</h2>
+    <p>Order of growth measures how an algorithm's time or memory usage changes as input size increases. Here are some common complexities:</p>
+    <ul>
+        <li>
+            <strong>O(1) – Constant Time:</strong> The algorithm takes the same time, no matter the input size. 
+            <span class="example">E.g., Looking at the first item in a list.</span>
+        </li>
+        <li>
+            <strong>O(n) – Linear Time:</strong> Time grows directly with the input size. 
+            <span class="example">E.g., Searching for a book on a shelf by checking each book one by one.</span>
+        </li>
+        <li>
+            <strong>O(n²) – Quadratic Time:</strong> Time grows faster, often due to nested operations.
+            <span class="example">E.g., Comparing every student in a class with every other student.</span>
+        </li>
+        <li>
+            <strong>O(log n) – Logarithmic Time:</strong> Time grows slowly, even with large inputs.
+            <span class="example">E.g., Finding a word in a dictionary by splitting the pages in half repeatedly.</span>
+        </li>
+        <li>
+            <strong class="highlight">O(2ⁿ) – Exponential Time:</strong> Time doubles with each added input, impractical for large problems.
+            <span class="example">E.g., Solving a puzzle where each piece doubles the possibilities.</span>
+        </li>
+    </ul>
+</div>
 
         <!-- 3. Takeaways from Design Principles -->
         <div class="section">
