@@ -95,7 +95,7 @@
         <div class="section">
             <h2>1. Types of Problems in Nature (Iteration, Recursion, Backtracking)</h2>
             <p><strong>Iteration</strong>: Repeating a set of instructions until a condition is met. It’s commonly used in problems where you need to process a collection multiple times.</p>
-            <div class="example">
+            <div>
                 <ul>
                     <li><strong>Finding the sum of elements in an array</strong>: Loop through the array and add up the numbers.</li>
                     <li><strong>Sorting an array</strong>: Algorithms like Bubble Sort use iteration to sort elements.</li>
@@ -103,7 +103,7 @@
             </div>
 
             <p><strong>Recursion</strong>: Involves a function calling itself to break down a problem into smaller parts. It’s useful in problems that can be divided into subproblems.</p>
-            <div class="example">
+            <div>
                 <ul>
                     <li><strong>Factorial calculation</strong>: Calculate recursively by multiplying a number by smaller numbers.</li>
                     <li><strong>Tree traversals</strong>: Use recursion to visit nodes in pre-order, in-order, or post-order.</li>
@@ -111,7 +111,7 @@
             </div>
 
             <p><strong>Backtracking</strong>: This method explores all possible solutions by going through each choice, backtracking when a path leads to an invalid solution.</p>
-            <div class="example">
+            <div>
                 <ul>
                     <li><strong>Solving Sudoku</strong>: Try filling the grid and backtrack when a conflict is found.</li>
                     <li><strong>N-Queens problem</strong>: Try placing queens on a chessboard such that no two queens threaten each other and backtrack if necessary.</li>
@@ -126,16 +126,11 @@
             <p><strong>Time Efficiency</strong>: Refers to how quickly an algorithm runs, often measured using time complexity.</p>
             <p><strong>Order of Growth</strong>: Describes how the algorithm's time or space complexity increases with the size of the input. Common complexities include:</p>
             <ul>
-                <li><code>O(1)</code>: Constant time</li>
-                <li><code>O(n)</code>: Linear time</li>
-                <li><code>O(n²)</code>: Quadratic time</li>
-                <li><code>O(log n)</code>: Logarithmic time</li>
-                <li><code>O(2^n)</code>: Exponential time</li>
-            </ul>
-            <p><strong>Class of Problems</strong>:</p>
-            <ul>
-                <li><strong>Polynomial Time Problems</strong>: These problems can be solved efficiently even as the input size grows.</li>
-                <li><strong>NP-Hard/NP-Complete</strong>: Problems that grow in complexity and are impractical to solve for large inputs.</li>
+                <li><code>O(1)</code>: Constant time– the algorithm runs in the same time, regardless of input size.</li>
+                <li><code>O(n)</code>: Linear time – the time increases directly in proportion to the input size.</li>
+                <li><code>O(n²)</code>: Quadratic time – time grows faster as the input size increases, like in nested loops.</li>
+                <li><code>O(log n)</code>: Logarithmic time– time increases slowly even as input grows, often seen in binary search.</li>
+                <li><code>O(2^n)</code>: Exponential time– the algorithm's time doubles with each added input, making it impractical for large inputs.</li>
             </ul>
         </div>
 
@@ -144,9 +139,9 @@
             <h2>3. Takeaways from Design Principles</h2>
             <p>Some essential algorithm design principles include:</p>
             <ul>
-                <li><strong>Divide and Conquer</strong>: Break problems into smaller sub-problems (e.g., Merge Sort).</li>
-                <li><strong>Greedy Strategy</strong>: Make the optimal choice at each step (e.g., Dijkstra’s algorithm).</li>
-                <li><strong>Dynamic Programming</strong>: Solve overlapping subproblems (e.g., Fibonacci sequence).</li>
+                <li><strong>Divide and Conquer</strong>: Break problems into smaller sub-problems, solve each part, and combine the results. (e.g., Merge Sort).</li>
+                <li><strong>Greedy Strategy</strong>: Make the optimal choice at each step (e.g., Dijkstra’s algorithm for finding the shortest path).</li>
+                <li><strong>Dynamic Programming</strong>: Solve overlapping subproblems, and solve them once, storing their solutions to avoid recomputation. (Example: Fibonacci sequence).</li>
                 <li><strong>Backtracking</strong>: Explore all possible solutions and backtrack when necessary (e.g., N-Queens problem).</li>
             </ul>
         </div>
@@ -217,6 +212,15 @@
             <h2>8. Importance of Graph Algorithms</h2>
             <p><strong>Spanning Trees</strong>: Connects all vertices with the fewest edges. Algorithms like Kruskal’s and Prim’s find the Minimum Spanning Tree (MST).</p>
             <p><strong>Shortest Paths</strong>: Dijkstra’s and Bellman-Ford algorithms find the shortest paths between nodes, useful in GPS systems and network routing.</p>
+        </div>
+        <div class="section">
+            <h2>9. Algorithm Design Techniques</h2>
+            <p><strong>Dijkstra’s Algorithm</strong>: Finds the shortest path from a source node to all other nodes in a graph. Time complexity is O(|E| log |V|).</p>
+            <p><strong>Floyd’s Algorithm</strong>:Calculates the shortest paths between all pairs of nodes. Time complexity is O(n³).</p>
+            <p><strong>Kruskal’s Algorithm</strong>:Finds the MST of a graph by adding edges in increasing order of weight. Time complexity is O(|E| log |E|).</p>
+            <p><strong>Warshall’s Algorithm</strong>:Computes the transitive closure of a directed graph. Time complexity is O(n³).</p>
+            <p><strong>Prim’s Algorithm</strong>:Finds the MST by growing a tree one edge at a time. Time complexity is O(|E| log |V|).</p>
+
         </div>
     </div>
 
