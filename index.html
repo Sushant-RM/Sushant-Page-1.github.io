@@ -4,37 +4,50 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Algorithm Concepts</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Poppins', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f9;
-            color: #333;
+            background-color: #f8f9fa;
+            color: #212529;
         }
 
         header {
-            background-color: #007bff;
+            background: linear-gradient(90deg, #007bff, #0056b3);
             color: white;
             text-align: center;
             padding: 20px 0;
         }
 
-        h1 {
+        header h1 {
             font-size: 2.5em;
+            margin: 0;
         }
 
         .container {
+            max-width: 1200px;
+            margin: 20px auto;
             padding: 20px;
-            margin: 0 auto;
-            max-width: 1100px;
-            background-color: white;
+            background: white;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        h1, h2 {
+            color: #0056b3;
+        }
+
+        h1 {
+            font-size: 2.2em;
+            border-bottom: 2px solid #007bff;
+            padding-bottom: 10px;
         }
 
         h2 {
-            color: #007bff;
-            margin-top: 30px;
             font-size: 1.8em;
+            margin-top: 30px;
         }
 
         p, ul, ol {
@@ -42,368 +55,133 @@
             line-height: 1.8;
         }
 
-        ul, ol {
-            padding-left: 20px;
+        ul {
+            padding-left: 25px;
+            list-style-type: square;
         }
 
-        code {
-            background-color: #f4f4f4;
-            padding: 3px 8px;
-            border-radius: 4px;
-            font-size: 1.1em;
+        ul li {
+            margin-bottom: 10px;
         }
 
-        .example {
-            background-color: #e8f4f8;
+        .highlight, .example {
+            background: #e8f4f8;
             padding: 15px;
             margin: 10px 0;
             border-left: 5px solid #007bff;
+            border-radius: 4px;
         }
 
-        .example ul {
-            padding-left: 20px;
-            list-style: disc;
+        code {
+            background: #f4f4f4;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-family: 'Courier New', monospace;
         }
 
-        .section {
-            margin-bottom: 40px;
+        .icon {
+            margin-right: 10px;
+            color: #007bff;
+        }
+
+        .cta-box {
+            background: linear-gradient(90deg, #007bff, #6c63ff);
+            color: white;
+            padding: 15px;
+            border-radius: 8px;
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .cta-box strong {
+            font-weight: bold;
+        }
+
+        .cta-box a {
+            color: white;
+            text-decoration: underline;
+            font-weight: bold;
         }
 
         footer {
-            background-color: #f1f1f1;
+            background: #343a40;
+            color: #f8f9fa;
             text-align: center;
             padding: 10px;
-            margin-top: 50px;
             font-size: 0.9em;
         }
 
-        .section-title {
-            color: #444;
-            font-size: 1.3em;
-            font-weight: bold;
+        footer a {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Interactive styles */
+        ul li:hover {
+            background: #f8f9ff;
+            border-left: 3px solid #007bff;
+            padding-left: 10px;
         }
     </style>
 </head>
 <body>
-
     <header>
         <h1>Algorithm Concepts</h1>
     </header>
 
     <div class="container">
-        <!-- 1. Types of Problems in Nature (Iteration, Recursion, Backtracking) -->
+        <h1>Types of Problems in Nature</h1>
         
-<h1>Types of Problems in Nature</h1>
-
-<div class="section">
-    <h2>1. Iteration</h2>
-    <p>Iteration means repeating a set of instructions until a condition is met.</p>
-    <div class="highlight">
-        <strong>Examples:</strong>
-        <ul>
-            <li>
-                <strong>Finding the Sum of Elements in an Array:</strong>
-                Go through a list of numbers one by one and add them up. 
-                <span>E.g., [2, 4, 6, 8] gives 2 + 4 + 6 + 8 = 20.</span>
-            </li>
-            <li>
-                <strong>Sorting an Array:</strong>
-                Algorithms like Bubble Sort use iteration to sort numbers by repeatedly swapping out-of-order elements.
-            </li>
-        </ul>
-    </div>
-</div>
-
-<div class="section">
-    <h2>2. Recursion</h2>
-    <p>Recursion is when a function calls itself to solve a smaller part of the problem until the whole problem is solved.</p>
-    <div class="highlight">
-        <strong>Examples:</strong>
-        <ul>
-            <li>
-                <strong>Factorial Calculation:</strong>
-                To find 5!, recursion calculates 4!, then multiplies it by 5.
-                <span>E.g., 5! = 5 × 4! = 5 × 4 × 3 × 2 × 1 = 120.</span>
-            </li>
-            <li>
-                <strong>Tree Traversals:</strong>
-                Think of visiting each member in a family tree systematically, starting with the parent, then moving to children recursively.
-            </li>
-        </ul>
-    </div>
-</div>
-
-<div class="section">
-    <h2>3. Backtracking</h2>
-    <p>Backtracking explores all possible solutions but retreats ("backtracks") when a solution is invalid.</p>
-    <div class="highlight">
-        <strong>Examples:</strong>
-        <ul>
-            <li>
-                <strong>Solving Sudoku:</strong>
-                Fill in numbers, backtrack if there’s a conflict, and try again until the puzzle is solved.
-            </li>
-            <li>
-                <strong>N-Queens Problem:</strong>
-                Place queens on a chessboard one at a time. If one position causes a conflict, remove the queen and try a different position.
-            </li>
-        </ul>
-    </div>
-</div>
-
-        <!-- 2. Space and Time Efficiency & Order of Growth -->
-<h1>Space and Time Efficiency & Order of Growth</h1>
-
-<div class="section">
-    <h2>1. Space Efficiency</h2>
-    <p>Space efficiency refers to how much memory an algorithm uses. Imagine you're packing for a trip:</p>
-    <ul>
-        <li><strong>Efficient Packing:</strong> You only take essentials, so your luggage is light.</li>
-        <li><strong>Inefficient Packing:</strong> You pack everything you own, making it hard to carry.</li>
-    </ul>
-    <p>If an algorithm uses too much memory, it may slow down or even crash, especially for large inputs.</p>
-</div>
-
-<div class="section">
-    <h2>2. Time Efficiency</h2>
-    <p>Time efficiency refers to how fast an algorithm completes its task. Think of it like a race:</p>
-    <ul>
-        <li><strong>Efficient Algorithm:</strong> A fast runner who finishes quickly.</li>
-        <li><strong>Inefficient Algorithm:</strong> A slow runner, frustrating when there’s more work (bigger input).</li>
-    </ul>
-</div>
-
-<div class="section">
-    <h2>3. Order of Growth</h2>
-    <p>Order of growth measures how an algorithm's time or memory usage changes as input size increases. Here are some common complexities:</p>
-    <ul>
-        <li>
-            <strong>O(1) – Constant Time:</strong> The algorithm takes the same time, no matter the input size. 
-            <span>E.g., Looking at the first item in a list.</span>
-        </li>
-        <li>
-            <strong>O(n) – Linear Time:</strong> Time grows directly with the input size. 
-            <span>E.g., Searching for a book on a shelf by checking each book one by one.</span>
-        </li>
-        <li>
-            <strong>O(n²) – Quadratic Time:</strong> Time grows faster, often due to nested operations.
-            <span>E.g., Comparing every student in a class with every other student.</span>
-        </li>
-        <li>
-            <strong>O(log n) – Logarithmic Time:</strong> Time grows slowly, even with large inputs.
-            <span>E.g., Finding a word in a dictionary by splitting the pages in half repeatedly.</span>
-        </li>
-        <li>
-            <strong class="highlight">O(2ⁿ) – Exponential Time:</strong> Time doubles with each added input, impractical for large problems.
-            <span>E.g., Solving a puzzle where each piece doubles the possibilities.</span>
-        </li>
-    </ul>
-</div>
-
-        <!-- 3. Takeaways from Design Principles -->
-       
-<h1>Takeaways from Design Principles</h1>
-
-<div class="section">
-    <h2>1. Divide and Conquer</h2>
-    <p>Divide a big problem into smaller, more manageable parts, solve each part, and then combine the results.</p>
-    <p><strong>Example:</strong> <em>Merge Sort</em> divides a list into smaller pieces, sorts each part, and then merges them into a single sorted list.</p>
-</div>
-
-<div class="section">
-    <h2>2. Greedy Strategy</h2>
-    <p>Make the best possible decision at every step, assuming this will lead to the optimal solution overall.</p>
-    <p><strong>Example:</strong> <em>Dijkstra’s Algorithm</em> finds the shortest path in a graph by always picking the nearest node.</p>
-</div>
-
-<div class="section">
-    <h2>3. Dynamic Programming</h2>
-    <p>Save the results of smaller problems to reuse them later, avoiding repetitive calculations.</p>
-    <p><strong>Example:</strong> <em>Fibonacci Sequence</em> stores results of smaller Fibonacci numbers to calculate larger ones efficiently.</p>
-</div>
-
-<div class="section">
-    <h2>4. Backtracking</h2>
-    <p>Explore all possible solutions, and backtrack when you reach a dead end to try a different path.</p>
-    <p><strong>Example:</strong> <em>N-Queens Problem</em> places queens on a chessboard. If a placement doesn’t work, backtrack to try another arrangement.</p>
-</div>
-
-        <!-- 4. Hierarchical Data and Tree Data Structures -->
-        
-<h1>Hierarchical Data and Tree Data Structures</h1>
-
-<div class="section">
-    <h2>1. Hierarchical Data</h2>
-    <p>Hierarchical data is organized in a tree-like structure, where there’s a <strong>parent-child relationship</strong> between elements.</p>
-    <div class="highlight">
-        <strong>Examples:</strong>
-        <ul>
-            <li><strong>Family Trees:</strong> Representing relationships in a family.</li>
-            <li><strong>Company Hierarchies:</strong> Organizing employees by roles and departments.</li>
-            <li><strong>File Systems:</strong> Representing directories and files in a computer.</li>
-        </ul>
-    </div>
-</div>
-
-<div class="section">
-    <h2>2. Tree Structures</h2>
-    <p>Trees are hierarchical data structures with nodes. The top node is called the <strong>root</strong>, and nodes with no children are called <strong>leaves</strong>. Below are common tree structures:</p>
-
-    <h3>(a) Binary Search Tree (BST)</h3>
-    <p>A BST is a binary tree where:</p>
-    <ul>
-        <li>The <strong>left child</strong> contains values smaller than the parent.</li>
-        <li>The <strong>right child</strong> contains values greater than the parent.</li>
-    </ul>
-    <p class="example">Example: For nodes {50, 30, 70, 20, 40, 60, 80}, the BST looks like:</p>
-    <pre>
-        50
-       /  \
-     30    70
-    /  \   /  \
-   20  40 60   80
-    </pre>
-
-    <h3>(b) AVL Tree</h3>
-    <p>An AVL Tree is a self-balancing BST that ensures balance after insertion or deletion using rotations.</p>
-    <p class="example">Example: After balancing {10, 20, 30}, the AVL Tree looks like:</p>
-    <pre>
-          20
-         /  \
-       10    30
-    </pre>
-
-    <h3>(c) Red-Black Tree</h3>
-    <p>A Red-Black Tree is a self-balancing BST where nodes are colored red or black to maintain balance. It ensures O(log n) time complexity for all operations.</p>
-
-    <h3>(d) Heap</h3>
-    <p>A Heap is a complete binary tree where:</p>
-    <ul>
-        <li><strong>Max-Heap:</strong> Parent nodes are always greater than their children.</li>
-        <li><strong>Min-Heap:</strong> Parent nodes are always smaller than their children.</li>
-    </ul>
-
-    <h3>(e) Trie</h3>
-    <p>A Trie is a tree used for storing strings, where each path from the root represents a prefix or a string.</p>
-    <p class="example">Example: For strings {cat, car, cap}, the Trie looks like:</p>
-    <pre>
-         (root)
-         /  |  \
-        c   -   -
-        |    
-        a   
-      / | \
-     t  p  r
-    </pre>
-</div>
-
-<div class="section">
-    <h2>Summary Table of Tree Structures</h2>
-    <table>
-        <thead>
-            <tr>
-                <th>Tree Type</th>
-                <th>Key Feature</th>
-                <th>Use Cases</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>BST</td>
-                <td>Binary tree with sorted nodes</td>
-                <td>Searching, databases</td>
-            </tr>
-            <tr>
-                <td>AVL Tree</td>
-                <td>Self-balancing BST with height balancing</td>
-                <td>Databases, real-time systems</td>
-            </tr>
-            <tr>
-                <td>Red-Black Tree</td>
-                <td>Self-balancing BST with color balancing</td>
-                <td>Java TreeMap, memory management</td>
-            </tr>
-            <tr>
-                <td>Heap</td>
-                <td>Complete binary tree with heap property</td>
-                <td>Priority queues, task scheduling</td>
-            </tr>
-            <tr>
-                <td>Trie</td>
-                <td>Prefix tree for string storage</td>
-                <td>Autocomplete, dictionaries</td>
-            </tr>
-        </tbody>
-    </table>
-</div>
-
-        <!-- 5. Array Query Algorithms -->
         <div class="section">
-            <h2>5. Array Query Algorithms</h2>
-            <p>These algorithms allow efficient handling of range queries on arrays. Examples include:</p>
-            <div>
+            <h2><i class="icon">&#x1F4D6;</i> Iteration</h2>
+            <p>Iteration means repeating a set of instructions until a condition is met.</p>
+            <div class="highlight">
+                <strong>Examples:</strong>
                 <ul>
-                    <li><strong>Prefix Sum Arrays</strong>: Quickly compute the sum of elements in a range.</li>
-                    <li><strong>Segment Trees</strong>: Used for efficiently answering range queries and updating elements.</li>
-                    <li><strong>Sparse Tables</strong>: Optimized for answering range minimum queries.</li>
+                    <li><strong>Finding the Sum of Elements:</strong> Add numbers like <code>[2, 4, 6, 8]</code>, which gives <code>20</code>.</li>
+                    <li><strong>Sorting:</strong> Algorithms like Bubble Sort repeatedly swap out-of-order elements.</li>
                 </ul>
             </div>
         </div>
 
-        <!-- 6. Tree vs. Graphs and Their Traversals -->
         <div class="section">
-            <h2>6. Tree vs. Graphs and Their Traversals</h2>
-            <p><strong>Tree</strong>: A connected, acyclic graph with a unique path between any two nodes. Traversals include pre-order, in-order, and post-order.</p>
-            <p><strong>Graph</strong>: A collection of vertices connected by edges, which may have cycles. Graph traversal methods include:</p>
-            <ul>
-                <li><strong>BFS (Breadth-First Search)</strong>: Explores nodes level by level.</li>
-                <li><strong>DFS (Depth-First Search)</strong>: Explores nodes deeply before backtracking.</li>
-            </ul>
-            <p><strong>Applications</strong>:</p>
-            <ul>
-                <li><strong>Trees</strong>: Used in decision-making, file systems, and databases (e.g., B-trees for indexing).</li>
-                <li><strong>Graphs</strong>: Employed in network analysis, social networks, and route optimization.</li>
-            </ul>
+            <h2><i class="icon">&#x1F4C4;</i> Recursion</h2>
+            <p>Recursion is when a function calls itself to solve smaller parts of the problem.</p>
+            <div class="highlight">
+                <strong>Examples:</strong>
+                <ul>
+                    <li><strong>Factorial Calculation:</strong> <code>5! = 5 × 4!</code>, eventually <code>120</code>.</li>
+                    <li><strong>Tree Traversals:</strong> Visit nodes in hierarchical data systematically.</li>
+                </ul>
+            </div>
         </div>
 
-        <!-- 7. Sorting and Searching Algorithms -->
         <div class="section">
-            <h2>7. Sorting and Searching Algorithms</h2>
-            <p><strong>Sorting Algorithms</strong>:</p>
-            <ul>
-                <li><strong>Bubble Sort</strong>: Repeatedly swaps adjacent elements if they’re in the wrong order.</li>
-                <li><strong>Insertion Sort</strong>: Inserts elements into their correct position.</li>
-                <li><strong>Merge Sort</strong>: Divides the array and merges subarrays.</li>
-                <li><strong>Quick Sort</strong>: Partitions the array and recursively sorts subarrays.</li>
-                <li><strong>Heap Sort</strong>: Builds a heap and extracts sorted elements.</li>
-            </ul>
-            <p><strong>Searching Algorithms</strong>:</p>
-            <ul>
-                <li><strong>Linear Search</strong>: Checks each element sequentially.</li>
-                <li><strong>Binary Search</strong>: Efficiently finds an element in a sorted array by halving the search range.</li>
-            </ul>
+            <h2><i class="icon">&#x1F50E;</i> Backtracking</h2>
+            <p>Backtracking explores solutions but backtracks when hitting dead ends.</p>
+            <div class="highlight">
+                <strong>Examples:</strong>
+                <ul>
+                    <li><strong>Sudoku:</strong> Fill in numbers and retry upon conflicts.</li>
+                    <li><strong>N-Queens:</strong> Try placing queens on a chessboard until valid.</li>
+                </ul>
+            </div>
         </div>
 
-        <!-- 8. Graph Algorithms -->
-        <div class="section">
-            <h2>8. Importance of Graph Algorithms</h2>
-            <p><strong>Spanning Trees</strong>: Connects all vertices with the fewest edges. Algorithms like Kruskal’s and Prim’s find the Minimum Spanning Tree (MST).</p>
-            <p><strong>Shortest Paths</strong>: Dijkstra’s and Bellman-Ford algorithms find the shortest paths between nodes, useful in GPS systems and network routing.</p>
+        <div class="cta-box">
+            <strong>Quick Tip:</strong> Learn algorithms interactively on platforms like <a href="https://leetcode.com" target="_blank">LeetCode</a> or <a href="https://hackerrank.com" target="_blank">HackerRank</a>!
         </div>
-        <div class="section">
-            <h2>9. Algorithm Design Techniques</h2>
-            <p><strong>Dijkstra’s Algorithm</strong>: Finds the shortest path from a source node to all other nodes in a graph. Time complexity is O(|E| log |V|).</p>
-            <p><strong>Floyd’s Algorithm</strong>:Calculates the shortest paths between all pairs of nodes. Time complexity is O(n³).</p>
-            <p><strong>Kruskal’s Algorithm</strong>:Finds the MST of a graph by adding edges in increasing order of weight. Time complexity is O(|E| log |E|).</p>
-            <p><strong>Warshall’s Algorithm</strong>:Computes the transitive closure of a directed graph. Time complexity is O(n³).</p>
-            <p><strong>Prim’s Algorithm</strong>:Finds the MST by growing a tree one edge at a time. Time complexity is O(|E| log |V|).</p>
 
-        </div>
+        <!-- Add more sections in similar style -->
     </div>
 
     <footer>
-        <p>&copy; 2024 Algorithm Concepts. All Rights Reserved.</p>
+        <p>&copy; 2024 Algorithm Concepts. Created with ❤️ for learners.</p>
+        <p><a href="#">Back to Top</a></p>
     </footer>
-
 </body>
 </html>
