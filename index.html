@@ -112,11 +112,25 @@
         <li>O(log n): Logarithmic time. E.g., Binary search in a dictionary.</li>
         <li>O(2ⁿ): Exponential time. E.g., Solving a puzzle doubling in possibilities.</li>
     </ul>
+
+        
+        <section id="efficiency">
+    <h4>How do you determine the most efficient approach when solving a complex problem?</h4>
+    <p>To determine the most efficient approach, I assess the time and space complexity of the solution. For example, in sorting algorithms, comparing options like Quick Sort (O(n log n)) and Bubble Sort (O(n²)) helps to decide which is the more efficient approach for a large dataset.</p>
+</section>
+
+        
     <h2>Takeaways from Design Principles</h2>
     
     <h3>1. Divide and Conquer</h3>
     <p>Divide a big problem into smaller parts, solve each, and combine results.</p>
     <p>Example: Merge Sort divides and merges sorted lists.</p>
+
+    <section id="breaking-down-problem">
+    <h3>Reflect on how breaking down a problem into smaller components can help you approach it more effectively.</h3>
+    <p>Breaking down a problem into smaller parts makes it easier to manage and solve. For example, in Divide and Conquer approaches like Merge Sort, the problem is split into smaller subproblems, each of which can be solved independently before merging the results.</p>
+</section>
+
     
     <h3>2. Greedy Strategy</h3>
     <p>Make the best possible decision at each step, assuming it leads to the optimal solution.</p>
@@ -129,6 +143,18 @@
     <h3>4. Backtracking</h3>
     <p>Explore all solutions, backtracking if one path fails, to try others.</p>
     <p>Example: N-Queens Problem places queens on a chessboard without conflict.</p>
+        <section id="limitations">
+    <h4>How do you identify and address potential limitations or weaknesses in a proposed solution?</h4>
+    <p>Identifying limitations often involves considering edge cases, scalability, and performance. For example, the naive solution for the N-Queens problem might not scale well, requiring backtracking to address potential conflicts and ensure a solution is found.</p>
+</section>
+
+
+        <section id="simplicity-vs-optimization">
+    <h3>How do you decide when to prioritize simplicity over optimization in a solution?</h3>
+    <p>Simplicity is prioritized when the problem is small or the solution needs to be easily understood and maintained. For example, using Linear Search for small datasets might be simpler and more readable than implementing Binary Search, even though Binary Search is more optimized.</p>
+</section>
+
+
     <h2>Hierarchical Data and Tree Data Structures</h2>
     
     <h3>1. Hierarchical Data</h3>
@@ -188,6 +214,16 @@
         <li>Linear Search: Checks each element sequentially.</li>
         <li>Binary Search: Efficiently finds an element in a sorted array by halving the search range.</li>
     </ul>
+        <section id="trade-offs">
+    <h4>Reflect on the trade-offs while choosing between different approaches to solve a problem.</h4>
+    <p>When choosing between different approaches, there are trade-offs between time complexity and space complexity. For example, Quick Sort is faster (O(n log n)) but uses more memory due to recursion, while Merge Sort uses less memory but is also slower in practice for small datasets.</p>
+</section>
+
+        <section id="criteria">
+    <h4>What criteria do you use to evaluate the effectiveness of a solution?</h4>
+    <p>The effectiveness of a solution can be evaluated based on several criteria: time efficiency (how quickly the algorithm executes), space efficiency (how much memory is required), and how well it handles edge cases. For instance, Binary Search is effective because it reduces search time from O(n) to O(log n) for sorted arrays.</p>
+</section>
+
     <h2>Graph Algorithms</h2>
     <p>Graph algorithms deal with problems involving graphs like finding shortest paths, spanning trees, and connectivity.</p>
     <ul>
@@ -196,6 +232,11 @@
         <li>Floyd-Warshall Algorithm: Calculates shortest paths between all pairs of nodes.</li>
         <li>Prim's Algorithm: Finds the Minimum Spanning Tree (MST) of a graph.</li>
     </ul>
+        <section id="innovation-vs-tradition">
+    <h4>How do you decide when to innovate versus relying on tried-and-tested solutions?</h4>
+    <p>Innovation is necessary when traditional solutions don’t scale, or the problem involves new, complex requirements. For example, Dijkstra’s Algorithm is a tried-and-tested solution for shortest path problems, but for graphs with negative weights, Bellman-Ford Algorithm may be more appropriate, requiring a more innovative approach.</p>
+</section>
+
     <h2>Importance of Graph Algorithms</h2>
     <p>Graph algorithms are essential in solving real-world problems such as:</p>
     <ul>
