@@ -3,158 +3,168 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <title>Algorithm Concepts</title>
     <style>
         body {
-            font-family: 'Poppins', sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f0f4f8; /* Soft light blue */
-            color: #333; /* Dark text for contrast */
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        h1, h2 {
+            color: #333;
+        }
+        h2 {
+            margin-top: 30px;
+        }
+        p {
             line-height: 1.6;
         }
-
-        header, section {
-            margin: 20px auto;
-            padding: 20px;
-            max-width: 800px;
-            background-color: white; /* Clean white sections */
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-            border-radius: 10px;
-        }
-
-        h1, h2 {
-            text-align: center;
-            color: #2c3e50; /* Deep blue for headings */
-            margin-bottom: 10px;
-        }
-
-        h1 {
-            font-size: 2rem;
-        }
-
-        h2 {
-            font-size: 1.5rem;
-        }
-
         ul {
-            list-style: none;
-            padding: 0;
-        }
-
-        ul li {
             margin: 10px 0;
         }
-
-        .project-description {
-            background-color: #27ae60; /* Green background for emphasis */
-            color: white;
-            padding: 15px;
-            border-radius: 10px;
-            font-size: 1rem;
+        code {
+            background-color: #f4f4f4;
+            padding: 2px 4px;
+            border-radius: 4px;
         }
-
-        a {
-            text-decoration: none;
-            color: white;
+        .example {
+            background-color: #e8f4f8;
+            padding: 10px;
+            margin: 10px 0;
+            border-left: 5px solid #007BFF;
         }
-
-        a:hover {
-            opacity: 0.9;
-        }
-
-        .button {
-            display: inline-block;
-            background-color: #2980b9; /* Vibrant blue */
-            padding: 10px 15px;
-            margin: 5px 0;
-            border-radius: 5px;
-            font-size: 1rem;
-            text-align: center;
-        }
-
-        .button:hover {
-            background-color: #21618c; /* Slightly darker on hover */
-        }
-
-        blockquote {
-            font-style: italic;
-            margin: 20px 0;
-            padding: 15px;
-            background-color: #ecf0f1; /* Light grey */
-            border-left: 5px solid #27ae60; /* Green border */
-            color: #555;
-        }
-
-        dl dt {
-            font-weight: bold;
-            margin-top: 10px;
-            color: #2c3e50; /* Dark blue for emphasis */
-        }
-
-        dl dd {
-            margin: 5px 0 15px 20px;
-        }
-
-        footer {
-            text-align: center;
-            margin: 20px 0;
-            font-size: 0.9rem;
-            color: #7f8c8d; /* Muted grey */
+        .section {
+            margin-bottom: 40px;
         }
     </style>
 </head>
 <body>
-    <header>
-        <h1>Hello, We are:</h1>
-        <ul>
-            <li>Sushant R Maheshwari</li>
-            <li>Aditya Kadwadkar</li>
-            <li>Prajwal Hurakadli</li>
-            <li>Aditya Belamkar </li>
-            <li>👋😎</li>
-        </ul>
-    </header>
-    
-<section>
-    <h2>🖥️ Introduction to Design and Analysis of Algorithms</h2>
-    <div class="project-description">
-        <p>
-            The course **Design and Analysis of Algorithms** is all about learning how to solve problems in the smartest way possible. 
-            Algorithms are step-by-step instructions that help computers do things like finding the shortest route on a map, sorting a list of names, or securing your online data.
-        </p>
-        <p>
-            In this course, we learned about **data structures** like boxes for storing data (e.g., lists, stacks, and queues) and different ways to solve problems, such as breaking a problem into smaller parts or finding the best option step by step. 
-            These are tools that make programs faster and more efficient.
-        </p>
-        <h3>Connecting the Course to Real-World Applications</h3>
-        <p>
-            Algorithms are everywhere! They help in apps like Google Maps for finding the quickest way to your destination, Netflix for recommending movies, 
-            and even banks for secure transactions. The same ideas can be used for making a Smart City—like managing traffic or saving energy—by using data and smart solutions.
-        </p>
+
+    <h1>Algorithm Concepts</h1>
+
+    <div class="section">
+        <h2>1. Types of Problems in Nature (Iteration, Recursion, Backtracking)</h2>
+        <p><strong>Iteration</strong>: Repeating a set of instructions until a condition is met. It's used for processing collections multiple times.</p>
+        <div class="example">
+            <ul>
+                <li><strong>Finding the sum of elements in an array</strong>: Loop through the array and add up all the numbers.</li>
+                <li><strong>Sorting an array</strong>: Algorithms like Bubble Sort use iteration to arrange elements.</li>
+            </ul>
+        </div>
+
+        <p><strong>Recursion</strong>: A function calls itself to solve smaller parts of a problem.</p>
+        <div class="example">
+            <ul>
+                <li><strong>Factorial calculation</strong>: Multiply a number recursively by smaller numbers down to 1.</li>
+                <li><strong>Tree Traversals</strong>: Using recursion to visit nodes in pre-order, in-order, or post-order.</li>
+            </ul>
+        </div>
+
+        <p><strong>Backtracking</strong>: Explores all solutions by trying each option and backtracking when necessary.</p>
+        <div class="example">
+            <ul>
+                <li><strong>Solving Sudoku</strong>: Try values and backtrack if there's a conflict.</li>
+                <li><strong>N-Queens problem</strong>: Try placing queens so they don't threaten each other and backtrack if a solution doesn't work.</li>
+            </ul>
+        </div>
     </div>
-</section>
 
-
-    <section>
-        <h2>🛠 Smart City Designing</h2>
+    <div class="section">
+        <h2>2. Space and Time Efficiency & Order of Growth</h2>
+        <p><strong>Space Efficiency</strong>: Refers to how much memory an algorithm uses.</p>
+        <p><strong>Time Efficiency</strong>: Refers to how fast an algorithm runs, often described by time complexity.</p>
+        <p><strong>Order of Growth</strong>: Describes how the time or space complexity increases with input size:</p>
         <ul>
-            <li class="project-description">
-                <strong>Smart City Designing</strong>: This project involves the conceptualization, design, and development of a Smart City that involves technology, sustainable practices, and data-driven governance to enhance the quality of life for citizens, improve urban efficiency, and drive economic growth. This project is about building a modern city that uses smart technology to make life easier, safer, and greener. It focuses on improving things like transportation, energy use, and public services by using tools like sensors, apps, and clean energy. The goal is to create a city that works better for people and the planet.</strong>
-            </li>
-            <li class="project-description">
-                <strong>Features Of The City:</strong>
-                <ul>
-                    <li>Sustainability: Focus on protecting the environment by using renewable energy, managing waste smartly, saving water, and promoting eco-friendly transportation.</li>
-                    <li>Efficiency: Make city services work better by using data and real-time updates to improve traffic, energy use, waste handling, and safety.</li>
-                    <li>Connectivity: Build a super-connected city where people, businesses, and services communicate seamlessly using advanced technologies like IoT, 5G, and cloud systems.</li>
-                    <li>Quality of Life: Make life better for everyone with smarter healthcare, education, transport, and security services.</li>
-                </ul>
-            </li>
+            <li><code>O(1)</code>: Constant time</li>
+            <li><code>O(n)</code>: Linear time</li>
+            <li><code>O(n²)</code>: Quadratic time</li>
+            <li><code>O(log n)</code>: Logarithmic time</li>
+            <li><code>O(2^n)</code>: Exponential time</li>
         </ul>
-    </section>
+        <p><strong>Class of Problems</strong>:</p>
+        <ul>
+            <li><strong>Polynomial Time Problems</strong>: Solvable efficiently as input size grows.</li>
+            <li><strong>NP-Hard/NP-Complete</strong>: Problems that become impractical for large inputs.</li>
+        </ul>
+    </div>
 
-    <!-- The remaining content remains unchanged -->
+    <div class="section">
+        <h2>3. Takeaways from Design Principles</h2>
+        <ul>
+            <li><strong>Divide and Conquer</strong>: Break problems into smaller sub-problems (e.g., Merge Sort).</li>
+            <li><strong>Greedy Strategy</strong>: Make the best choice at each step (e.g., Dijkstra’s algorithm).</li>
+            <li><strong>Dynamic Programming</strong>: Solve overlapping subproblems (e.g., Fibonacci sequence).</li>
+            <li><strong>Backtracking</strong>: Explore all solutions and backtrack when necessary (e.g., N-Queens problem).</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>4. Hierarchical Data and Tree Data Structures</h2>
+        <p><strong>Hierarchical Data</strong>: Data structured in a tree-like fashion, with parent-child relationships. Examples include family trees and file systems.</p>
+        <p><strong>Tree Structures</strong>:</p>
+        <ul>
+            <li><strong>BST</strong>: A tree where each node’s left child is smaller and the right child is larger.</li>
+            <li><strong>AVL Tree</strong>: A self-balancing BST.</li>
+            <li><strong>Red-Black Tree</strong>: A balanced tree using color properties.</li>
+            <li><strong>Heap</strong>: A complete binary tree, used in priority queues.</li>
+            <li><strong>Trie</strong>: A tree for storing strings, used in autocomplete systems.</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>5. Array Query Algorithms</h2>
+        <p>These algorithms allow efficient answers to range queries in arrays.</p>
+        <div class="example">
+            <ul>
+                <li><strong>Prefix Sum Arrays</strong>: Quickly calculate the sum of elements in a range.</li>
+                <li><strong>Segment Trees</strong>: Handle range queries and updates efficiently.</li>
+                <li><strong>Sparse Tables</strong>: Optimized for range minimum queries.</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>6. Tree vs. Graphs and Their Traversals</h2>
+        <p><strong>Tree</strong>: A connected, acyclic graph. Traversal types include pre-order, in-order, and post-order.</p>
+        <p><strong>Graph</strong>: A collection of vertices connected by edges, possibly with cycles. Traversals include BFS (level-wise) and DFS (deep-first).</p>
+    </div>
+
+    <div class="section">
+        <h2>7. Sorting and Searching Algorithms</h2>
+        <p><strong>Sorting Algorithms</strong>:</p>
+        <ul>
+            <li><strong>Bubble Sort</strong>: Repeatedly swaps adjacent elements if needed.</li>
+            <li><strong>Insertion Sort</strong>: Inserts elements into the sorted part of the array.</li>
+            <li><strong>Merge Sort</strong>: Divides and merges sorted subarrays.</li>
+            <li><strong>Quick Sort</strong>: Partitions and recursively sorts subarrays.</li>
+            <li><strong>Heap Sort</strong>: Builds a heap and sorts by extracting elements.</li>
+        </ul>
+        <p><strong>Searching Algorithms</strong>:</p>
+        <ul>
+            <li><strong>Linear Search</strong>: Checks each element sequentially.</li>
+            <li><strong>Binary Search</strong>: Efficient for sorted arrays by halving the search range.</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>8. Importance of Graph Algorithms (Spanning Trees and Shortest Paths)</h2>
+        <ul>
+            <li><strong>Spanning Trees</strong>: Connect all vertices with the least edges, using Kruskal’s and Prim’s algorithms.</li>
+            <li><strong>Shortest Paths</strong>: Dijkstra’s and Bellman-Ford find the shortest path between nodes.</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>9. Algorithm Design Techniques</h2>
+        <ul>
+            <li><strong>Dijkstra’s Algorithm</strong>: Finds the shortest path in a weighted graph.</li>
+            <li><strong>Floyd’s Algorithm</strong>: Calculates all-pairs shortest paths.</li>
+            <li><strong>Kruskal’s Algorithm</strong>: Finds the Minimum Spanning Tree (MST).</li>
+            <li><strong>Warshall’s Algorithm</strong>: Computes transitive closure.</li>
+            <li><strong>Prim’s Algorithm</strong>: Finds the MST by growing a tree.</li>
+        </ul>
+    </div>
+
 </body>
 </html>
