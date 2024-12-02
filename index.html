@@ -147,18 +147,113 @@
         </div>
 
         <!-- 4. Hierarchical Data and Tree Data Structures -->
-        <div class="section">
-            <h2>4. Hierarchical Data and Tree Data Structures</h2>
-            <p><strong>Hierarchical Data</strong>: Data that is structured in a tree-like manner with parent-child relationships. Examples include file systems and organizational charts.</p>
-            <p><strong>Tree Structures</strong>:</p>
-            <ul>
-                <li><strong>Binary Search Tree (BST)</strong>: A tree where each node's left child is smaller, and the right child is larger, enabling efficient searches.</li>
-                <li><strong>AVL Tree</strong>: A self-balancing BST ensuring log(n) performance.</li>
-                <li><strong>Red-Black Tree</strong>: A balanced tree using colors to ensure optimal performance.</li>
-                <li><strong>Heap</strong>: A complete binary tree, useful for implementing priority queues.</li>
-                <li><strong>Trie</strong>: A tree-like structure for storing strings, often used in autocomplete systems.</li>
-            </ul>
-        </div>
+        
+<h1>Hierarchical Data and Tree Data Structures</h1>
+
+<div class="section">
+    <h2>1. Hierarchical Data</h2>
+    <p>Hierarchical data is organized in a tree-like structure, where there’s a <strong>parent-child relationship</strong> between elements.</p>
+    <div class="highlight">
+        <strong>Examples:</strong>
+        <ul>
+            <li><strong>Family Trees:</strong> Representing relationships in a family.</li>
+            <li><strong>Company Hierarchies:</strong> Organizing employees by roles and departments.</li>
+            <li><strong>File Systems:</strong> Representing directories and files in a computer.</li>
+        </ul>
+    </div>
+</div>
+
+<div class="section">
+    <h2>2. Tree Structures</h2>
+    <p>Trees are hierarchical data structures with nodes. The top node is called the <strong>root</strong>, and nodes with no children are called <strong>leaves</strong>. Below are common tree structures:</p>
+
+    <h3>(a) Binary Search Tree (BST)</h3>
+    <p>A BST is a binary tree where:</p>
+    <ul>
+        <li>The <strong>left child</strong> contains values smaller than the parent.</li>
+        <li>The <strong>right child</strong> contains values greater than the parent.</li>
+    </ul>
+    <p class="example">Example: For nodes {50, 30, 70, 20, 40, 60, 80}, the BST looks like:</p>
+    <pre>
+        50
+       /  \
+     30    70
+    /  \   /  \
+   20  40 60   80
+    </pre>
+
+    <h3>(b) AVL Tree</h3>
+    <p>An AVL Tree is a self-balancing BST that ensures balance after insertion or deletion using rotations.</p>
+    <p class="example">Example: After balancing {10, 20, 30}, the AVL Tree looks like:</p>
+    <pre>
+          20
+         /  \
+       10    30
+    </pre>
+
+    <h3>(c) Red-Black Tree</h3>
+    <p>A Red-Black Tree is a self-balancing BST where nodes are colored red or black to maintain balance. It ensures O(log n) time complexity for all operations.</p>
+
+    <h3>(d) Heap</h3>
+    <p>A Heap is a complete binary tree where:</p>
+    <ul>
+        <li><strong>Max-Heap:</strong> Parent nodes are always greater than their children.</li>
+        <li><strong>Min-Heap:</strong> Parent nodes are always smaller than their children.</li>
+    </ul>
+
+    <h3>(e) Trie</h3>
+    <p>A Trie is a tree used for storing strings, where each path from the root represents a prefix or a string.</p>
+    <p class="example">Example: For strings {cat, car, cap}, the Trie looks like:</p>
+    <pre>
+         (root)
+         /  |  \
+        c   -   -
+        |    
+        a   
+      / | \
+     t  p  r
+    </pre>
+</div>
+
+<div class="section">
+    <h2>Summary Table of Tree Structures</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Tree Type</th>
+                <th>Key Feature</th>
+                <th>Use Cases</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>BST</td>
+                <td>Binary tree with sorted nodes</td>
+                <td>Searching, databases</td>
+            </tr>
+            <tr>
+                <td>AVL Tree</td>
+                <td>Self-balancing BST with height balancing</td>
+                <td>Databases, real-time systems</td>
+            </tr>
+            <tr>
+                <td>Red-Black Tree</td>
+                <td>Self-balancing BST with color balancing</td>
+                <td>Java TreeMap, memory management</td>
+            </tr>
+            <tr>
+                <td>Heap</td>
+                <td>Complete binary tree with heap property</td>
+                <td>Priority queues, task scheduling</td>
+            </tr>
+            <tr>
+                <td>Trie</td>
+                <td>Prefix tree for string storage</td>
+                <td>Autocomplete, dictionaries</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
 
         <!-- 5. Array Query Algorithms -->
         <div class="section">
